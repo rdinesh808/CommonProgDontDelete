@@ -1,5 +1,6 @@
 package com.lambdaexpress;
 
+@FunctionalInterface
 interface one {
 	public void add();
 }

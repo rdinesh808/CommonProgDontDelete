@@ -13,7 +13,7 @@ import org.openqa.selenium.remote.CapabilityType;
 public class HTTPCertificationHandle {
 public static void main(String[] args) throws Exception {
 	
-	System.setProperty("webdriver.chrome.driver", "C:\\Users\\computer003\\Downloads\\chromedriver_win32\\chromedriver (2).exe");
+	System.setProperty("webdriver.chrome.driver", "../CommonProgramFileRead/Driver/chromedriver.exe");
 	
 	ChromeOptions co = new ChromeOptions();
 	co.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);

@@ -19,7 +19,43 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
+      <scope>test</scope>
     </dependency>
+    
+    <!-- https://mvnrepository.com/artifact/junit/junit -->
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.12</version>
+    <scope>test</scope>
+</dependency>
+    
+    
+	<dependency>
+	    <groupId>info.cukes</groupId>
+	    <artifactId>cucumber-java</artifactId>
+	    <version>1.2.5</version>
+	</dependency>
+    
+	<dependency>
+	    <groupId>info.cukes</groupId>
+	    <artifactId>cucumber-junit</artifactId>
+	    <version>1.2.5</version>
+	    <scope>test</scope>
+	</dependency>
+    
+	<dependency>
+	    <groupId>org.seleniumhq.selenium</groupId>
+	    <artifactId>selenium-java</artifactId>
+	    <version>3.141.59</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.testng</groupId>
+	    <artifactId>testng</artifactId>
+	    <version>7.0.0</version>
+	    <scope>test</scope>
+	</dependency>
 
 <!-- Apache POI Excel Read  -->
 <dependency>
@@ -27,6 +63,7 @@
     <artifactId>poi</artifactId>
     <version>3.17</version>
 </dependency>
+
 <dependency>
     <groupId>org.apache.poi</groupId>
     <artifactId>poi-ooxml</artifactId>
@@ -39,6 +76,7 @@
         <artifactId>core</artifactId>
         <version>3.3.0</version>
     </dependency>
+    
     <dependency>
         <groupId>com.google.zxing</groupId>
         <artifactId>javase</artifactId>
@@ -52,25 +90,11 @@
     <version>3.7.1</version>
 </dependency>
 
-    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-java</artifactId>
-    <version>3.141.59</version>
-</dependency>
-
 <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 <dependency>
     <groupId>mysql</groupId>
     <artifactId>mysql-connector-java</artifactId>
     <version>8.0.18</version>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/org.testng/testng -->
-<dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.0.0</version>
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
