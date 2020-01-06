@@ -28,11 +28,12 @@ public static void main(String[] args) {
 		System.out.println("--> " + sheet.getSheetName());
 	}
 	
-	// Java 8 forEach loop Example
-	System.out.println("Retrieving Sheets using Java 8 forEach with lambda");
-    book.forEach(sheet -> {
-    System.out.println("<--> " + sheet.getSheetName());
-    });
+			/*
+			 * // Java 8 forEach loop Example
+			 * System.out.println("Retrieving Sheets using Java 8 forEach with lambda");
+			 * book.forEach(sheet -> { System.out.println("<--> " + sheet.getSheetName());
+			 * });
+			 */
 	
 	}catch(Exception e) {
 		System.out.println(e);

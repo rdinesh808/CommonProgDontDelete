@@ -10,7 +10,7 @@ public class ISTtoESTConvert {
 		 TimeZone etTimeZone = TimeZone.getTimeZone("America/New_York");
 	     Date currentDate = new Date();
 	     FORMATTER.setTimeZone(etTimeZone);
-	     String s1 = FORMATTER.format(currentDate).replace("D", "S"); 
+	     String s1 = FORMATTER.format(currentDate);
 	     System.out.println(s1); 
 	}
 }
