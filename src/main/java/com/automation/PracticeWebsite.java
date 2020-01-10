@@ -21,7 +21,6 @@ public class PracticeWebsite {
 		try{
 		System.setProperty("webdriver.chrome.driver", "../CommonProgramFileRead/Driver/chromedriver.exe");
 		ChromeOptions co = new ChromeOptions();
-		co.addArguments("--headless");
 		driver = new ChromeDriver(co);
 		driver.get("http://www.qaclickacademy.com/practice.php");
 		driver.manage().window().maximize();
