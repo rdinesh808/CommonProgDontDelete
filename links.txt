@@ -1,0 +1,3 @@
+https://stackoverflow.com/questions/44848582/whats-publishhtml-reportfiles-parameter-syntax -- HTML report publish in jenkins
+https://stackoverflow.com/questions/18448134/an-easier-way-to-control-test-order-in-testng -- Testng run without xml file
+https://www.edureka.co/community/48046/what-difference-between-driver-and-driver-navigate-methods -- diff. in get() and navigate().to()

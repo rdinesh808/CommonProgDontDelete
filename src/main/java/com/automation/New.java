@@ -3,6 +3,8 @@ package com.automation;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
 
 public class New {
@@ -11,6 +13,7 @@ public class New {
 	public void initial(){
 		try{
 		System.setProperty("webdriver.chrome.driver", "../CommonProgramFileRead/Driver/chromedriver.exe");
+		DesiredCapabilities cap = new DesiredCapabilities();
 		ChromeOptions co = new ChromeOptions();
 		co.addArguments("--incognito");
 		driver = new ChromeDriver(co);
