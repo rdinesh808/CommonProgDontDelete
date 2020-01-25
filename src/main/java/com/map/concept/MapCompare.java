@@ -8,7 +8,7 @@ public static void main(String[] args) {
 	Map<Integer, String> map1 = new LinkedHashMap<Integer, String>();
 	Map<Integer, String> map2 = new LinkedHashMap<Integer, String>();
 	map1.put(1, "J");map1.put(2, "A");map1.put(3, "V");map1.put(4, "A");
-	map2.put(1, "J");map2.put(2, "E");map2.put(3, "V");map2.put(4, "A");
+	map2.put(1, "J");map2.put(2, "E");map2.put(3, "V");map2.put(4, "E");
 	for(Map.Entry<Integer,String> m : map1.entrySet()) {
 		int key = m.getKey();
 		String firstmapvalue = m.getValue();
