@@ -13,11 +13,13 @@ public class ReportExamp {
 	ExtentTest test;
 	@BeforeSuite
 	public void initials() throws Exception{
+		String desc = "<font color='red'><b>DINESH<b><br>"
+				      + "Extents Report Description </font>";
 		Date d = new Date();
 		String s1 = d.toString().replace(":", "_").replace("-", "_")+".html";
 		report = new ExtentReports(System.getProperty("user.dir")+"\\HTMLReport\\"+s1,true,DisplayOrder.NEWEST_FIRST);
 		report.loadConfig(new File("E:\\STS-Workspace\\CommonProgramFileRead\\LogoAdd\\LogoReport.xml"));
-		test = report.startTest("LOGO add in Extents Report..");
+		test = report.startTest("LOGO add in Extents Report..",desc);
 	}
 	@Test
 	public void tc1(){
