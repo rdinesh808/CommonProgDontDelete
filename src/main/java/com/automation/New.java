@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class New {
 	ChromeDriver driver;
-	@Test(priority = 0)
+	@Test
 	public void initial(){
 		try{
 		System.setProperty("webdriver.chrome.driver", "../CommonProgramFileRead/Driver/chromedriver.exe");
@@ -19,6 +19,7 @@ public class New {
 		driver = new ChromeDriver(co);
 		driver.get("https://escrow.gsihealth.net");
 		driver.manage().window().maximize();
+		System.out.println(driver.manage().window().getSize());
 		Thread.sleep(3000);
 		}catch(Exception e){
 			System.out.println(e.getMessage());

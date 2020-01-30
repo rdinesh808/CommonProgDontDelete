@@ -1,7 +1,9 @@
 package com.automation;
+
+import java.util.ArrayList;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.By.ByXPath;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -31,13 +33,19 @@ public class NewTabOpen {
 		
 		Actions a = new Actions(driver);
 		a.sendKeys(Keys.ENTER).build().perform();
-		
-		String s1 = Keys.chord(Keys.CONTROL,Keys.ENTER);
-		WebElement s2 = driver.findElement(By.xpath("//*[text()='What is Selenium? Introduction to Selenium Automation Testing']"));
-	    s2.sendKeys(s1);
-		
+
+	    String aa = driver.findElement(By.xpath("//h3[text()='What is Selenium? Introduction to Selenium Automation Testing']")).getText();
+	    Thread.sleep(3000);
+	    System.out.println(aa);
+		((JavascriptExecutor) driver).executeScript("window.open()");
+		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(1));
+		driver.get("https://seleniumeasy.com");
 		Thread.sleep(5000);
-		
-		driver.close();
+		driver.switchTo().window(tabs.get(1)).close();
+		Thread.sleep(3000);
+		driver.switchTo().window(tabs.get(0));
+		Thread.sleep(2000);
+		driver.quit();
 	}
 }
