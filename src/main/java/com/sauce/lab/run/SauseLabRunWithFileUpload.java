@@ -9,6 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.SessionId;
 
 public class SauseLabRunWithFileUpload {
 public static void main(String[] args) {
@@ -40,7 +41,16 @@ public static void main(String[] args) {
 		WebElement browsers = driver.findElement(By.name("uploadfile"));
 		browsers.sendKeys(System.getProperty("user.dir")+"/links.txt");
 		Thread.sleep(6000);
+		driver.close();
 		driver.quit();
+		Thread.sleep(15000);
+		SessionId session = ((RemoteWebDriver)driver).getSessionId();
+		String s1 = driver.getSessionId().toString();
+		System.out.println(session);
+		System.out.println(s1);
+		String command = "curl -X GET -u Dindj:96685d26-4c24-46d6-b9e2-8f68caa1248a -o ./saucevideo/ --create-dirs mkdir https://saucelabs.com/rest/v1/Dindj/jobs/"+s1+"/assets/video.mp4 --output ./saucevideo/DJVideo.mp4";
+		Process process = Runtime.getRuntime().exec(command);
+		process.getInputStream();
     } catch(Exception e) {
         System.out.println(e);
     }

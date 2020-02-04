@@ -1,4 +1,4 @@
-package com.fileupload;
+package com.alertpopup;
 
 import java.io.IOException;
 import org.openqa.selenium.By;
@@ -6,19 +6,26 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-public class FileUpload {
+
+public class AlertPopup {
 	public static void main(String[] args) throws IOException, Exception {	
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\computer003\\Desktop\\Groovy Create\\CommonProgDontDelete\\Driver\\chromedriver.exe");
-		//Instantiation of driver object. To launch Firefox browser
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("http://softwaretestingplace.blogspot.com/2015/10/sample-web-page-to-test.html");
+		Thread.sleep(3000);
+		WebElement ele = driver.findElement(By.xpath("//input[@value='Click for Popup']"));
 		JavascriptExecutor js = (JavascriptExecutor)driver;
-	    js.executeScript("window.scrollBy(0,950)");
-	    //driver.switchTo().defaultContent();
-		WebElement browser = driver.findElement(By.name("uploadfile"));
+	    js.executeScript("arguments[0].scrollIntoView(true)", ele);
+	    ele.click();
+	    
+	    String s1 = driver.switchTo().alert().getText();
 	    Thread.sleep(3000);
-		browser.sendKeys("C:\\Users\\computer003\\Downloads\\easyinfo.txt");
-		Thread.sleep(6000);
+	    System.out.println(s1);
+	    
+	    driver.switchTo().alert().accept();
+	    Thread.sleep(3000);
+	    
+	    driver.quit();
 	}
 }
